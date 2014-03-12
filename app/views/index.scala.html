@@ -1,0 +1,22 @@
+@(filmes: List[Filme])
+
+@import helper._
+
+@main("Filmes Cult") {
+
+<div>
+   <h1>
+    <img src="@routes.Assets.at("images/play-logo.png")" alt="Play!"/>
+    Filmes Cult
+    <img src="@routes.Assets.at("images/PoweredMongoDB.png")" alt="MongoDB"/>
+    </h1>
+    <ul>
+        @for(filme <- filmes) {
+            <li>
+               <a href="@filme.url">(@filme.ano)  @filme.nome - dirigido por @filme.diretor.nome</a>
+            </li>
+        }
+    </ul>
+    <h2>@filmes.size() filmes</h2>
+</div>
+}
