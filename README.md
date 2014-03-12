@@ -1,32 +1,37 @@
 Play! com MongoDB - Filmes cult
 =====================================
 
-Setup do Play:
+- setup do Play:
 
-Execute do diretório do projeto:
+ Execute do diretório do projeto:
 
+```
 play run
+```
 
-
-Setup do MongoDB:
+- setup do MongoDB:
 
 
 Execute do diretório do projeto:
 
-
+```
  mongo < mongodb/mondodb-comandos.txt
+```
 
 Resultado esperado:
 
+```
 MongoDB shell version: 2.4.9
 connecting to: test
 switched to db boaglio
 true
 98
 bye
+```
 
 Um teste para exibir um registro:
 
+```
 > db.filmes.findOne();
 {
         "_id" : ObjectId("531f9d490612421e5c4847d3"),
@@ -38,4 +43,4 @@ Um teste para exibir um registro:
         "url" : "http://www.imdb.com/title/tt0054215/",
         "diretor" : "Alfred Hitchcock"
 }
-
+```
